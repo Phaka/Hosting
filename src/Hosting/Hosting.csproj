@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Phaka.Hosting</AssemblyName>
+    <RootNamespace>Phaka.Hosting</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Werner Strydom</Authors>
+    <Company>Werner Strydom</Company>
+    <Product>Phaka</Product>
+    <Description>A simple framework for creating your own host builder and configure the service provider using a Startup class.</Description>
+    <Copyright>Werner Strydom</Copyright>
+    <PackageLicenseUrl>https://github.com/Phaka/Hosting/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Phaka/Hosting</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Phaka/Hosting</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageTags>hosting</PackageTags>
+    <PackageReleaseNotes>The initial implementation</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.1\Phaka.Hosting.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.1\Phaka.Hosting.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
